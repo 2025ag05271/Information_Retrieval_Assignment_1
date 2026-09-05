@@ -7802,7 +7802,14 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="BBC-News-IR-Assignment-%E2%80%94-Part-A:-Text-Processing-&amp;-Part-B:-Vocabulary-and-Indexing">BBC News IR Assignment — Part A: Text Processing &amp; Part B: Vocabulary and Indexing<a class="anchor-link" href="#BBC-News-IR-Assignment-%E2%80%94-Part-A:-Text-Processing-&amp;-Part-B:-Vocabulary-and-Indexing">¶</a></h1><p><strong>Dataset:</strong> BBC News raw text dataset (2,225 documents; business, entertainment, politics, sport, tech)</p>
+<h1 id="IR-Assignment">IR Assignment<a class="anchor-link" href="#IR-Assignment">¶</a></h1><h3 id="Group-Member-Details">Group Member Details<a class="anchor-link" href="#Group-Member-Details">¶</a></h3><ul>
+<li><strong>Rahul George Jacob</strong> (BITS ID: 2025AG05310)</li>
+<li><strong>Sanjaytharan Tamilselvan</strong> (BITS ID: 2025AG05271)</li>
+<li><strong>Balakrishna Meesala</strong> (BITS ID: 2025AG05524)</li>
+<li><strong>Pradyumnan R</strong> (BITS ID: 2025AG05028)</li>
+<li><strong>Santhosh Kumar S</strong> (BITS ID: 2025AG05606)</li>
+</ul>
+<p><strong>Dataset:</strong> BBC News raw text dataset; Domain: News</p>
 </div>
 </div>
 </div>
@@ -7811,39 +7818,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">platform</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Python version: </span><span class="si">{</span><span class="n">sys</span><span class="o">.</span><span class="n">version</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Platform: </span><span class="si">{</span><span class="n">platform</span><span class="o">.</span><span class="n">platform</span><span class="p">()</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Python version: 3.12.4 (tags/v3.12.4:8e8a4ba, Jun  6 2024, 19:30:16) [MSC v.1940 64 bit (AMD64)]
-Platform: Windows-11-10.0.26100-SP0
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">importlib</span>
@@ -7877,7 +7852,7 @@ matplotlib: 3.11.1
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
@@ -7908,7 +7883,7 @@ matplotlib: 3.11.1
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
@@ -7928,7 +7903,7 @@ matplotlib: 3.11.1
 
 
 <span class="n">REPO_ROOT</span> <span class="o">=</span> <span class="n">find_repo_root</span><span class="p">(</span><span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Repository root: </span><span class="si">{</span><span class="n">REPO_ROOT</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Repository root located"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -7941,18 +7916,18 @@ matplotlib: 3.11.1
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Repository root: C:\Users\sanjaytharan.tamilse\OneDrive - Autoliv\Engineer_Sanjaytharan\Programming\Python\Sem 2\IR_Assignment_1
+<pre>Repository root located
 </pre>
 </div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">OUTPUT_FIGURES_DIR</span> <span class="o">=</span> <span class="n">REPO_ROOT</span> <span class="o">/</span> <span class="s2">"outputs"</span> <span class="o">/</span> <span class="s2">"figures"</span>
@@ -7961,23 +7936,7 @@ matplotlib: 3.11.1
 
 <span class="k">for</span> <span class="n">_dir</span> <span class="ow">in</span> <span class="p">(</span><span class="n">OUTPUT_FIGURES_DIR</span><span class="p">,</span> <span class="n">OUTPUT_TABLES_DIR</span><span class="p">,</span> <span class="n">OUTPUT_INDEXES_DIR</span><span class="p">):</span>
     <span class="n">_dir</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Ready: </span><span class="si">{</span><span class="n">_dir</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Ready: C:\Users\sanjaytharan.tamilse\OneDrive - Autoliv\Engineer_Sanjaytharan\Programming\Python\Sem 2\IR_Assignment_1\outputs\figures
-Ready: C:\Users\sanjaytharan.tamilse\OneDrive - Autoliv\Engineer_Sanjaytharan\Programming\Python\Sem 2\IR_Assignment_1\outputs\tables
-Ready: C:\Users\sanjaytharan.tamilse\OneDrive - Autoliv\Engineer_Sanjaytharan\Programming\Python\Sem 2\IR_Assignment_1\outputs\indexes
-</pre>
 </div>
 </div>
 </div>
@@ -7998,7 +7957,7 @@ Ready: C:\Users\sanjaytharan.tamilse\OneDrive - Autoliv\Engineer_Sanjaytharan\Pr
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">DATASET_ROOT</span> <span class="o">=</span> <span class="n">REPO_ROOT</span> <span class="o">/</span> <span class="s2">"datasets"</span> <span class="o">/</span> <span class="s2">"bbc-fulltext"</span> <span class="o">/</span> <span class="s2">"bbc"</span>
@@ -8012,7 +7971,6 @@ Ready: C:\Users\sanjaytharan.tamilse\OneDrive - Autoliv\Engineer_Sanjaytharan\Pr
 <span class="n">EXPECTED_DOCUMENT_COUNT</span> <span class="o">=</span> <span class="mi">2225</span>
 <span class="n">ENCODING_CANDIDATES</span> <span class="o">=</span> <span class="p">(</span><span class="s2">"utf-8"</span><span class="p">,</span> <span class="s2">"latin-1"</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"DATASET_ROOT: </span><span class="si">{</span><span class="n">DATASET_ROOT</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"EXPECTED_CATEGORIES: </span><span class="si">{</span><span class="n">EXPECTED_CATEGORIES</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"EXPECTED_DOCUMENT_COUNT: </span><span class="si">{</span><span class="n">EXPECTED_DOCUMENT_COUNT</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
@@ -8027,8 +7985,7 @@ Ready: C:\Users\sanjaytharan.tamilse\OneDrive - Autoliv\Engineer_Sanjaytharan\Pr
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>DATASET_ROOT: C:\Users\sanjaytharan.tamilse\OneDrive - Autoliv\Engineer_Sanjaytharan\Programming\Python\Sem 2\IR_Assignment_1\datasets\bbc-fulltext\bbc
-EXPECTED_CATEGORIES: ('business', 'entertainment', 'politics', 'sport', 'tech')
+<pre>EXPECTED_CATEGORIES: ('business', 'entertainment', 'politics', 'sport', 'tech')
 EXPECTED_DOCUMENT_COUNT: 2225
 </pre>
 </div>
@@ -8043,7 +8000,7 @@ EXPECTED_DOCUMENT_COUNT: 2225
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="Dataset-validation-and-loading">Dataset validation and loading<a class="anchor-link" href="#Dataset-validation-and-loading">¶</a></h2><p>The helper functions below are generic setup utilities (file discovery, encoding</p>
-<p>fallback, validation) and are provided complete.</p>
+<p>fallback, validation).</p>
 <p>Document ID policy: <code>"{category}/{file_stem}"</code>, e.g. <code>"business/001"</code>. This is</p>
 <p>deterministic (based only on the file's path) and unique because BBC filenames are</p>
 <p>unique within each category.</p>
@@ -8055,7 +8012,7 @@ EXPECTED_DOCUMENT_COUNT: 2225
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">validate_dataset_root</span><span class="p">(</span><span class="n">dataset_root</span><span class="p">:</span> <span class="n">Path</span><span class="p">,</span> <span class="n">expected_categories</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
@@ -8092,7 +8049,7 @@ EXPECTED_DOCUMENT_COUNT: 2225
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">read_text_with_fallback</span><span class="p">(</span><span class="n">path</span><span class="p">:</span> <span class="n">Path</span><span class="p">,</span> <span class="n">encodings</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
@@ -8153,7 +8110,7 @@ EXPECTED_DOCUMENT_COUNT: 2225
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">documents</span> <span class="o">=</span> <span class="p">[]</span>
@@ -8225,8 +8182,7 @@ Unreadable files: 0
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="Text-Preprocessing">Text Preprocessing<a class="anchor-link" href="#Text-Preprocessing">¶</a></h2><p>The aim of preprocessing is to convert each raw BBC News article into a clean</p>
 <p>and consistent sequence of terms that can later be used to build a vocabulary</p>
-<p>and an inverted index. I keep every intermediate version instead of only the</p>
-<p>final output.</p>
+<p>and an inverted index.</p>
 <p>The stages used in this implementation are:</p>
 <ol>
 <li><p><strong>Tokenization</strong>: split raw text into word tokens.</p>
@@ -8251,7 +8207,7 @@ Unreadable files: 0
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
@@ -8284,7 +8240,7 @@ Unreadable files: 0
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">ensure_nltk_resource</span><span class="p">(</span><span class="n">resource_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">download_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
@@ -8364,7 +8320,7 @@ English stop words loaded: 198
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">TOKEN_PATTERN</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">"[A-Za-z]+(?:'[A-Za-z]+)?"</span><span class="p">)</span>
@@ -8398,7 +8354,7 @@ English stop words loaded: 198
 <h3 id="Porter-stemming">Porter stemming<a class="anchor-link" href="#Porter-stemming">¶</a></h3><p>The Porter stemmer applies a sequence of suffix-removal rules. It does not look</p>
 <p>up a word in a dictionary, so the result may be a non-word. For example,</p>
 <p><code>government</code> may become <code>govern</code>, while <code>studies</code> may become <code>studi</code>.</p>
-<p>In information retrieval, this can improve recall by combining morphological</p>
+<p>As we know, this can improve recall by combining morphological</p>
 <p>variants under one stem. However, aggressive stemming may also combine terms</p>
 <p>that should remain different.</p>
 </div>
@@ -8409,11 +8365,11 @@ English stop words loaded: 198
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">stem_tokens</span><span class="p">(</span><span class="n">tokens</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
-<span class="w">    </span><span class="sd">"""Apply Porter's stemming algorithm to a sequence of tokens."""</span>
+<span class="w">    </span><span class="sd">"""Applies Porter's stemming algorithm to a sequence of tokens."""</span>
     <span class="k">return</span> <span class="p">[</span><span class="n">PORTER_STEMMER</span><span class="o">.</span><span class="n">stem</span><span class="p">(</span><span class="n">token</span><span class="p">)</span> <span class="k">for</span> <span class="n">token</span> <span class="ow">in</span> <span class="n">tokens</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -8445,7 +8401,7 @@ English stop words loaded: 198
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">penn_to_wordnet</span><span class="p">(</span><span class="n">tag</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
@@ -8487,8 +8443,7 @@ English stop words loaded: 198
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h3 id="Complete-preprocessing-function">Complete preprocessing function<a class="anchor-link" href="#Complete-preprocessing-function">¶</a></h3><p>The following function performs the stages in a fixed order and returns every</p>
 <p>intermediate representation. Stemming and lemmatization are parallel outputs,</p>
-<p>not consecutive operations. Applying both one after the other would make it</p>
-<p>difficult to determine which method caused a vocabulary change.</p>
+<p>not consecutive operations.</p>
 </div>
 </div>
 </div>
@@ -8497,7 +8452,7 @@ English stop words loaded: 198
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">preprocess_document</span><span class="p">(</span><span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]]:</span>
@@ -8561,7 +8516,7 @@ Representations stored for each document: tokenized, normalized, no_stopwords, s
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">STAGE_LABELS</span> <span class="o">=</span> <span class="p">{</span>
@@ -8639,7 +8594,7 @@ After WordNet lemmatization:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">corpus_statistics</span><span class="p">(</span><span class="n">document_collection</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">dict</span><span class="p">],</span> <span class="n">field</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
@@ -8700,7 +8655,6 @@ After WordNet lemmatization:
 
 <span class="n">statistics_csv_path</span> <span class="o">=</span> <span class="n">OUTPUT_TABLES_DIR</span> <span class="o">/</span> <span class="s2">"preprocessing_statistics.csv"</span>
 <span class="n">statistics_table</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">statistics_csv_path</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Saved statistics to: </span><span class="si">{</span><span class="n">statistics_csv_path</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -8721,8 +8675,6 @@ Tokenization, original case        847950            33765                   381
     After stop-word removal        486779            29327                   218.78                       48                     2205                    42.59                         13.14
       After Porter stemming        486779            20578                   218.78                       48                     2205                    42.59                         39.06
 After WordNet lemmatization        486779            24703                   218.78                       48                     2205                    42.59                         26.84
-
-Saved statistics to: C:\Users\sanjaytharan.tamilse\OneDrive - Autoliv\Engineer_Sanjaytharan\Programming\Python\Sem 2\IR_Assignment_1\outputs\tables\preprocessing_statistics.csv
 </pre>
 </div>
 </div>
@@ -8747,7 +8699,7 @@ Saved statistics to: C:\Users\sanjaytharan.tamilse\OneDrive - Autoliv\Engineer_S
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">record</span> <span class="ow">in</span> <span class="n">stage_statistics</span><span class="p">:</span>
@@ -8803,7 +8755,7 @@ After WordNet lemmatization
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">representative_words</span> <span class="o">=</span> <span class="p">[</span>
@@ -8867,7 +8819,7 @@ universities     univers  universities                     True
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [20]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Compare the aligned outputs produced for every corpus token. The Counter keeps</span>
@@ -8902,7 +8854,6 @@ universities     univers  universities                     True
 
 <span class="n">comparison_csv_path</span> <span class="o">=</span> <span class="n">OUTPUT_TABLES_DIR</span> <span class="o">/</span> <span class="s2">"stemming_vs_lemmatization_examples.csv"</span>
 <span class="n">corpus_difference_table</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">comparison_csv_path</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Saved comparison examples to: </span><span class="si">{</span><span class="n">comparison_csv_path</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -8938,8 +8889,6 @@ technology   technolog    technology           561
    economy     economi       economy           443
  companies     compani       company           428
   services      servic       service           428
-
-Saved comparison examples to: C:\Users\sanjaytharan.tamilse\OneDrive - Autoliv\Engineer_Sanjaytharan\Programming\Python\Sem 2\IR_Assignment_1\outputs\tables\stemming_vs_lemmatization_examples.csv
 </pre>
 </div>
 </div>
@@ -9330,7 +9279,7 @@ one
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [21]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
@@ -9339,8 +9288,6 @@ one
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 
-<span class="c1"># Create the output folders if they do not already exist. This also makes this</span>
-<span class="c1"># section more robust when it is copied into a different notebook.</span>
 <span class="n">OUTPUT_TABLES_DIR</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">OUTPUT_TABLES_DIR</span><span class="p">)</span>
 <span class="n">OUTPUT_INDEXES_DIR</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">OUTPUT_INDEXES_DIR</span><span class="p">)</span>
 <span class="n">OUTPUT_TABLES_DIR</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -9406,7 +9353,7 @@ Representations to index: ['tokenized', 'normalized', 'no_stopwords', 'stemmed',
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [22]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">build_vocabulary</span><span class="p">(</span><span class="n">document_collection</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">dict</span><span class="p">],</span> <span class="n">token_field</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
@@ -9451,6 +9398,11 @@ After case normalization: 29,503 unique terms
 After stop-word removal: 29,327 unique terms
 After Porter stemming: 20,578 unique terms
 After WordNet lemmatization: 24,703 unique terms
+
+After case normalization: 29,503 unique terms
+After stop-word removal: 29,327 unique terms
+After Porter stemming: 20,578 unique terms
+After WordNet lemmatization: 24,703 unique terms
 </pre>
 </div>
 </div>
@@ -9483,7 +9435,7 @@ After WordNet lemmatization: 24,703 unique terms
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [23]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [22]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">calculate_term_frequencies</span><span class="p">(</span>
@@ -9557,7 +9509,7 @@ After WordNet lemmatization: 24,703 unique terms
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [24]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [23]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">build_inverted_index</span><span class="p">(</span>
@@ -9647,7 +9599,7 @@ After WordNet lemmatization: inverted index contains 24,703 terms
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [25]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [24]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">build_term_dictionary</span><span class="p">(</span>
@@ -9731,7 +9683,7 @@ After WordNet lemmatization: inverted index contains 24,703 terms
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [26]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [25]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">validate_index</span><span class="p">(</span>
@@ -9819,7 +9771,7 @@ After WordNet lemmatization: inverted index contains 24,703 terms
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [27]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [26]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">calculate_index_statistics</span><span class="p">(</span><span class="n">field</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
@@ -9898,7 +9850,6 @@ After WordNet lemmatization: inverted index contains 24,703 terms
 
 <span class="n">index_statistics_path</span> <span class="o">=</span> <span class="n">OUTPUT_TABLES_DIR</span> <span class="o">/</span> <span class="s2">"index_statistics.csv"</span>
 <span class="n">index_statistics</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">index_statistics_path</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Saved index statistics to: </span><span class="si">{</span><span class="n">index_statistics_path</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -9919,8 +9870,6 @@ Tokenization, original case                 2225        847950            33765 
     After stop-word removal                 2225        486779            29327          344012                    11.73                        1                     1888                         13.14                       25.83
       After Porter stemming                 2225        486779            20578          322562                    15.68                        1                     1888                         39.06                       30.46
 After WordNet lemmatization                 2225        486779            24703          325155                    13.16                        1                     1963                         26.84                       29.90
-
-Saved index statistics to: C:\Users\sanjaytharan.tamilse\OneDrive - Autoliv\Engineer_Sanjaytharan\Programming\Python\Sem 2\IR_Assignment_1\outputs\tables\index_statistics.csv
 </pre>
 </div>
 </div>
@@ -9945,7 +9894,7 @@ Saved index statistics to: C:\Users\sanjaytharan.tamilse\OneDrive - Autoliv\Engi
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [28]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [27]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">normalize_sample_term</span><span class="p">(</span><span class="n">term</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">field</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
@@ -10033,8 +9982,6 @@ Saved index statistics to: C:\Users\sanjaytharan.tamilse\OneDrive - Autoliv\Engi
     <span class="n">sample_postings_path</span><span class="p">,</span>
     <span class="n">index</span><span class="o">=</span><span class="kc">False</span>
 <span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Saved corrected sample postings to: </span><span class="si">{</span><span class="n">sample_postings_path</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -10071,8 +10018,6 @@ input_term='market', indexed_term='market', term_id=13579, CF=861, DF=420, first
 input_term='music', indexed_term='music', term_id=14746, CF=832, DF=236, first_postings=['business/001', 'business/020', 'business/207', 'business/226', 'entertainment/023', 'entertainment/042', 'entertainment/045', 'entertainment/067', 'entertainment/090', 'entertainment/103']
 input_term='football', indexed_term='football', term_id=8330, CF=175, DF=111, first_postings=['business/040', 'business/179', 'business/193', 'business/219', 'business/223', 'business/224', 'business/229', 'business/242', 'business/271', 'business/367']
 input_term='internet', indexed_term='internet', term_id=11228, CF=306, DF=163, first_postings=['business/001', 'business/011', 'business/079', 'business/112', 'business/114', 'business/124', 'business/129', 'business/196', 'business/205', 'business/208']
-
-Saved corrected sample postings to: C:\Users\sanjaytharan.tamilse\OneDrive - Autoliv\Engineer_Sanjaytharan\Programming\Python\Sem 2\IR_Assignment_1\outputs\tables\sample_postings.csv
 </pre>
 </div>
 </div>
@@ -10104,12 +10049,12 @@ Saved corrected sample postings to: C:\Users\sanjaytharan.tamilse\OneDrive - Aut
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [29]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [28]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">vocabulary_to_dataframe</span><span class="p">(</span><span class="n">field</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>
@@ -10148,28 +10093,7 @@ Saved corrected sample postings to: C:\Users\sanjaytharan.tamilse\OneDrive - Aut
         <span class="p">)</span>
 
     <span class="n">exported_files</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="n">vocabulary_path</span><span class="p">,</span> <span class="n">index_path</span><span class="p">])</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Exported files:"</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">file_path</span> <span class="ow">in</span> <span class="n">exported_files</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  </span><span class="si">{</span><span class="n">file_path</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Exported files:
-  C:\Users\sanjaytharan.tamilse\OneDrive - Autoliv\Engineer_Sanjaytharan\Programming\Python\Sem 2\IR_Assignment_1\outputs\tables\vocabulary_stemmed.csv
-  C:\Users\sanjaytharan.tamilse\OneDrive - Autoliv\Engineer_Sanjaytharan\Programming\Python\Sem 2\IR_Assignment_1\outputs\indexes\inverted_index_stemmed.json
-  C:\Users\sanjaytharan.tamilse\OneDrive - Autoliv\Engineer_Sanjaytharan\Programming\Python\Sem 2\IR_Assignment_1\outputs\tables\vocabulary_lemmatized.csv
-  C:\Users\sanjaytharan.tamilse\OneDrive - Autoliv\Engineer_Sanjaytharan\Programming\Python\Sem 2\IR_Assignment_1\outputs\indexes\inverted_index_lemmatized.json
-</pre>
 </div>
 </div>
 </div>
@@ -10207,7 +10131,7 @@ Saved corrected sample postings to: C:\Users\sanjaytharan.tamilse\OneDrive - Aut
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [29]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">DEMONSTRATION_FIELD</span> <span class="o">=</span> <span class="s2">"lemmatized"</span>
@@ -10727,12 +10651,10 @@ inverted_index_lemmatized.json
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [31]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [30]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Part C: Boolean Retrieval</span>
-
-<span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">dataclasses</span><span class="w"> </span><span class="kn">import</span> <span class="n">dataclass</span>
 
@@ -10773,11 +10695,11 @@ Number of documents: 2,225
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [32]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [31]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">preprocess_query_term</span><span class="p">(</span><span class="n">term</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">"""Apply the same preprocessing used by the lemmatized index."""</span>
+<span class="w">    </span><span class="sd">"""Applies the same preprocessing used by the lemmatized index."""</span>
     <span class="n">tokens</span> <span class="o">=</span> <span class="n">tokenize</span><span class="p">(</span><span class="n">term</span><span class="p">)</span>
     <span class="n">tokens</span> <span class="o">=</span> <span class="n">normalize_case</span><span class="p">(</span><span class="n">tokens</span><span class="p">)</span>
     <span class="n">tokens</span> <span class="o">=</span> <span class="n">remove_stop_words</span><span class="p">(</span><span class="n">tokens</span><span class="p">)</span>
@@ -10789,7 +10711,7 @@ Number of documents: 2,225
 
 
 <span class="k">def</span><span class="w"> </span><span class="nf">get_postings</span><span class="p">(</span><span class="n">term</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
-<span class="w">    </span><span class="sd">"""Return the postings list for a raw query term."""</span>
+<span class="w">    </span><span class="sd">"""Returns the postings list for a raw query term."""</span>
     <span class="n">indexed_term</span> <span class="o">=</span> <span class="n">preprocess_query_term</span><span class="p">(</span><span class="n">term</span><span class="p">)</span>
 
     <span class="k">if</span> <span class="ow">not</span> <span class="n">indexed_term</span><span class="p">:</span>
@@ -10840,7 +10762,7 @@ Input: 'the' | Indexed term: '' | Documents: 0
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [33]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [32]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nd">@dataclass</span>
@@ -10941,7 +10863,7 @@ Input: 'the' | Indexed term: '' | Documents: 0
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [34]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [33]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">stats</span> <span class="o">=</span> <span class="n">OperationStats</span><span class="p">()</span>
@@ -11001,7 +10923,7 @@ Comparisons performed: 3,565
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [35]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [34]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">BOOLEAN_OPERATORS</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"AND"</span><span class="p">,</span> <span class="s2">"OR"</span><span class="p">,</span> <span class="s2">"NOT"</span><span class="p">}</span>
@@ -11064,7 +10986,7 @@ Comparisons performed: 3,565
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [36]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [35]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">OPERATOR_PRECEDENCE</span> <span class="o">=</span> <span class="p">{</span>
@@ -11193,7 +11115,7 @@ Comparisons performed: 3,565
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [37]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [36]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">evaluate_rpn</span><span class="p">(</span>
@@ -11311,7 +11233,7 @@ Postings accesses: 2
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [38]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [37]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">evaluate_rpn_length_based</span><span class="p">(</span>
@@ -11428,7 +11350,7 @@ Length-based comparisons: 2,832
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [39]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [38]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">BENCHMARK_REPETITIONS</span> <span class="o">=</span> <span class="mi">100</span>
@@ -11497,7 +11419,7 @@ Length-based comparisons: 2,832
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[39]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[38]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -11532,8 +11454,8 @@ Length-based comparisons: 2,832
 <td>32</td>
 <td>670</td>
 <td>670</td>
-<td>0.0851</td>
-<td>0.0900</td>
+<td>0.0920</td>
+<td>0.0870</td>
 </tr>
 <tr>
 <th>1</th>
@@ -11541,8 +11463,8 @@ Length-based comparisons: 2,832
 <td>610</td>
 <td>607</td>
 <td>607</td>
-<td>0.1271</td>
-<td>0.1263</td>
+<td>0.1204</td>
+<td>0.1115</td>
 </tr>
 <tr>
 <th>2</th>
@@ -11550,8 +11472,8 @@ Length-based comparisons: 2,832
 <td>443</td>
 <td>4299</td>
 <td>4299</td>
-<td>0.4255</td>
-<td>0.4141</td>
+<td>0.4118</td>
+<td>0.4171</td>
 </tr>
 <tr>
 <th>3</th>
@@ -11559,8 +11481,8 @@ Length-based comparisons: 2,832
 <td>138</td>
 <td>1514</td>
 <td>1514</td>
-<td>0.1838</td>
-<td>0.1861</td>
+<td>0.1790</td>
+<td>0.1856</td>
 </tr>
 <tr>
 <th>4</th>
@@ -11568,8 +11490,8 @@ Length-based comparisons: 2,832
 <td>2209</td>
 <td>2832</td>
 <td>2832</td>
-<td>0.2576</td>
-<td>0.2513</td>
+<td>0.2529</td>
+<td>0.2517</td>
 </tr>
 </tbody>
 </table>
@@ -11596,7 +11518,7 @@ Length-based comparisons: 2,832
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [39]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">TOLERANT_FIELD</span> <span class="o">=</span> <span class="s2">"lemmatized"</span>
@@ -11633,7 +11555,7 @@ Maximum allowed edit distance: 1
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [41]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [40]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">edit_distance</span><span class="p">(</span><span class="n">left</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">right</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
@@ -11748,7 +11670,7 @@ Similar terms: [('politics', 1)]
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [41]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">tolerant_retrieve</span><span class="p">(</span>
@@ -11831,7 +11753,7 @@ Retrieved documents: 67
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [42]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">tolerant_test_cases</span> <span class="o">=</span> <span class="p">[</span>
@@ -11939,7 +11861,7 @@ Expected terms recovered: 20/20
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [44]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [43]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">tolerant_evaluation_table</span><span class="p">[</span>
@@ -11985,8 +11907,6 @@ Expected terms recovered: 20/20
     <span class="n">tolerant_results_path</span><span class="p">,</span>
     <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
 <span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Saved results to: </span><span class="si">{</span><span class="n">tolerant_results_path</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -12002,7 +11922,6 @@ Expected terms recovered: 20/20
 <pre>Expected-term recovery rate: 100.00%
 Average matching vocabulary terms: 2.10
 Average retrieved documents: 405.85
-Saved results to: C:\Users\sanjaytharan.tamilse\OneDrive - Autoliv\Engineer_Sanjaytharan\Programming\Python\Sem 2\IR_Assignment_1\outputs\tables\tolerant_retrieval_results.csv
 </pre>
 </div>
 </div>
@@ -12015,7 +11934,7 @@ Saved results to: C:\Users\sanjaytharan.tamilse\OneDrive - Autoliv\Engineer_Sanj
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Conclusion">Conclusion<a class="anchor-link" href="#Conclusion">¶</a></h2><p>Edit-distance-based tolerant retrieval was implemented using Levenshtein distance with a maximum allowed distance of one.</p>
+<p>Edit-distance-based tolerant retrieval was implemented using Levenshtein distance with a maximum allowed distance of one.</p>
 <p>The system successfully recovered the intended vocabulary term for all 20 deliberately modified queries. Some misspelled queries matched more than one vocabulary term, which increased the number of retrieved documents. This demonstrates that tolerant retrieval improves robustness to spelling errors, but may also introduce additional matches when several terms have similar spellings.</p>
 <p>The final tolerant-retrieval results were saved as:</p>
 <p><code>tolerant_retrieval_results.csv</code></p>
@@ -12052,7 +11971,7 @@ Saved results to: C:\Users\sanjaytharan.tamilse\OneDrive - Autoliv\Engineer_Sanj
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [45]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [44]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">evaluation_queries</span> <span class="o">=</span> <span class="p">[</span>
@@ -12255,7 +12174,7 @@ Counter({'simple': 10, 'compound': 5, 'boolean': 5, 'morphological': 5, 'toleran
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [46]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [45]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">get_relevance_judgment</span><span class="p">(</span><span class="n">query_item</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">set</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
@@ -12392,7 +12311,7 @@ Counter({'simple': 10, 'compound': 5, 'boolean': 5, 'morphological': 5, 'toleran
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [46]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">retrieve_for_evaluation</span><span class="p">(</span><span class="n">query_item</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">set</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
@@ -12571,7 +12490,7 @@ Counter({'simple': 10, 'compound': 5, 'boolean': 5, 'morphological': 5, 'toleran
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [48]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [47]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">summary_by_type</span> <span class="o">=</span> <span class="p">(</span>
@@ -12605,8 +12524,6 @@ Counter({'simple': 10, 'compound': 5, 'boolean': 5, 'morphological': 5, 'toleran
     <span class="n">evaluation_results_path</span><span class="p">,</span>
     <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
 <span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Saved detailed evaluation results to: </span><span class="si">{</span><span class="n">evaluation_results_path</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -12626,8 +12543,6 @@ morphological     1.0000     1.0    1.0000
        simple     1.0000     1.0    1.0000
      tolerant     0.9974     1.0    0.9987
       overall     0.9996     1.0    0.9998
-
-Saved detailed evaluation results to: C:\Users\sanjaytharan.tamilse\OneDrive - Autoliv\Engineer_Sanjaytharan\Programming\Python\Sem 2\IR_Assignment_1\outputs\tables\evaluation_results.csv
 </pre>
 </div>
 </div>
